@@ -99,10 +99,6 @@ class Affiliate_WP_Shortcodes {
 		}
 
 		if ( ! is_user_logged_in() ) {
-
-			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-			wp_enqueue_style( 'affwp-forms', AFFILIATEWP_PLUGIN_URL . 'assets/css/forms' . $suffix . '.css', AFFILIATEWP_VERSION );
-
 			return affiliate_wp()->login->login_form( $redirect );
 		}
 
