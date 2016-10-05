@@ -138,7 +138,7 @@ abstract class List_Table extends \WP_List_Table {
 	 */
 	public function get_row_action_link( $label, $query_args, $args = array() ) {
 
-		$base_uri = empty( $args['base_uri'] ) ? '' : $args['base_uri'];
+		$base_uri = empty( $args['base_uri'] ) ? false : $args['base_uri'];
 
 		if ( empty( $args['nonce'] ) ) {
 			$url = esc_url( add_query_arg( $query_args, $base_uri ) );
